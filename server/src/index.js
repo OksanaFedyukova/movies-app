@@ -42,13 +42,13 @@ async function startApolloServer(typeDefs, resolvers) {
   await server.start();
   server.applyMiddleware({ app });
 
-  app.use(express.static(path.join(__dirname, '../../client', 'build')));
+  app.use(express.static(path.join(__dirname, '../../client', 'dist')));
   app.use(express.static("public"));
 
 
 
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../../client', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, '../../client', 'dist', 'index.html'))
   });
 
   await new Promise(resolve => httpServer.listen({ port: process.env.PORT || 80 }, resolve));
