@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { IMAGE_BASE_PATH, API_KEY, API_BASE_URL } = require('../../../config');
+const { IMAGE_BASE_PATH, API_KEY, API_BASE_URL } = require('../../config/index');
 
 const { Movies } = require('./enteties/Movies');
 

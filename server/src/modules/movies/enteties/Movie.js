@@ -1,5 +1,5 @@
 const { format } = require('date-fns');
-const { IMAGE_BASE_PATH } = require('../../../config');
+const { IMAGE_BASE_PATH } = require('../../../config/index');
 
 class Movie {
     constructor(movie) {
