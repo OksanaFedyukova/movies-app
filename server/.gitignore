@@ -13,7 +13,6 @@
 
 # misc
 secret.txt
-/config
 .DS_Store
 .env
 .env.development.local
