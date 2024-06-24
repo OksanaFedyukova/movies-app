@@ -1,11 +1,11 @@
 const axios = require('axios');
-require('dotenv').config();
+const { IMAGE_BASE_PATH, API_KEY, API_BASE_URL } = require('../../../config');
 
 const { Movies } = require('./enteties/Movies');
 
 
 const getPopular = async (page) => {
-    const result = await axios.get(`${process.env.API_BASE_URL}movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=${page}`);
+    const result = await axios.get(`${API_BASE_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`);
 
     return new Movies(result.data);
 }
