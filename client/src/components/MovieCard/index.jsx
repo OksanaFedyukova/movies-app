@@ -1,4 +1,3 @@
-import * as React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -52,11 +51,11 @@ export default function MovieCard({movie, onCardSelect}) {
         overflow: 'hidden',
         textOverflow: 'ellipsis'
       }}>
-{movie.title}  
+          {movie.title}  
       </Typography>
-
+      
         <Typography variant="subtitle2" gutterBottom>
-        {formatrelease_date(movie.releaseDate)}
+        {movie.releaseDate}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
         {renderStars()}
