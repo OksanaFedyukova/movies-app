@@ -14,7 +14,7 @@ const pages = ['Setting', 'recommend', 'Policy'];
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{bgcolor: '#ef9a9a'}}>
+      <AppBar position="fixed" sx={{bgcolor: '#ef9a9af4'}}>
         <Toolbar>
           <AsideBar/> 
           <Link

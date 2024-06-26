@@ -6,6 +6,7 @@ import { useQuery } from "@apollo/client";
 import Pagination from '@mui/material/Pagination';
 
 import { MOVIES_QUERY } from './queries';
+
 const SelectedMovies = styled(Paper)(({theme})=> ({
     backgroundColor:'#fff',
     ...theme.typography.body2,
@@ -30,7 +31,7 @@ const Home = ()=>{
 
 return (
     <>
-    <Box sx={{ flexGrow: 1, mt:2}}>
+    <Box sx={{ flexGrow: 1, mt:10}}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Paper sx={{bgcolor: '#f6c6c6'}}>filter</Paper>

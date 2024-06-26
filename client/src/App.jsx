@@ -26,8 +26,11 @@ function App() {
     connectToDevTools: true
   }); */
   const { state } = useContext(AppContext);
-  const httpLink = new HttpLink({ uri: `${window.location.origin}/graphql` });
-  const localeMiddleware = new ApolloLink((operation, forward) => {
+/*   const httpLink = new HttpLink({ uri: `${window.location.origin}/graphql` });
+ */ 
+ const httpLink = new HttpLink({ uri: `http://localhost:4000/graphql` });
+
+ const localeMiddleware = new ApolloLink((operation, forward) => {
     const customHeaders = operation.getContext().hasOwnProperty("headers") ? operation.getContext().headers : {};
   
     operation.setContext({
@@ -49,7 +52,7 @@ function App() {
   <ApolloProvider client={client}>
    <BrowserRouter>
     <NavBar/>
-    <Container maxWidth="xl" sx={{bgcolor:"#ebebeb"}}>
+    <Container maxWidth="xl" sx={{bgcolor:"#ebebeb", mt:7}}>
         <Routes>
         <Route index  element ={<Home/>}/>
         <Route path="/setting" element ={<Setting/>}/>
