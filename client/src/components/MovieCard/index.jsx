@@ -46,7 +46,7 @@ export default function MovieCard({movie, onCardSelect}) {
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
         {renderStars()}
       </Box> 
- <CardMenu onCardSelect={onCardSelect}/>
+      <CardMenu onCardSelect={() => onCardSelect(movie)} />
 
       </CardContent>
    

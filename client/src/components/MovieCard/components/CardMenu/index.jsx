@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 
 
@@ -9,7 +8,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Box, IconButton, Menu, MenuItem } from '@mui/material';
 
   
-export default function CardMenu({onCardSelect}) {
+ export default function CardMenu({onCardSelect}) {
 
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -20,7 +19,7 @@ export default function CardMenu({onCardSelect}) {
     const handleMenuClose = () => {
       setAnchorEl(null);
     };
-    
+   
   return (
     <>
    <Box 
@@ -39,7 +38,7 @@ export default function CardMenu({onCardSelect}) {
         }}
       >
         <IconButton aria-label="favorite" sx={{ color: 'white' }} >
-        <FavoriteIcon />
+        <FavoriteIcon onClick={onCardSelect} />
           </IconButton>
           <IconButton aria-label="share"  sx={{ color: 'white' }} >
           <ShareIcon />                 

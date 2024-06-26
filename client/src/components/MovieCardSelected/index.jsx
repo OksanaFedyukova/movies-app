@@ -27,9 +27,9 @@ export default function MovieCardSelected({movie, onCardDelete}) {
     return stars;
   };
   return (
-    <Card sx={{ display: 'flex' }}>
+    <Card sx={{ display: 'flex', width:"90%", ml:2, mt:2 }}>
      
- <Menu
+   <Menu
         id="menu-appbar"
         anchorEl={anchorEl}
         anchorOrigin={{
@@ -47,14 +47,18 @@ export default function MovieCardSelected({movie, onCardDelete}) {
         <MenuItem onClick={onCardDelete}>Delete</MenuItem>
        
       </Menu>
+      
          <CardMedia
         component="img"
-        sx={{ height: 120 }}
+        sx={{ height: 130, minWidth: 150, maxWidth:150}}
         image={movie.image}
         alt={movie.title}
       />
      <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
+          <Typography component="subtitle1" variant="h6" 
+          sx={{
+                    fontSize:15,
+                }}>
            {movie.title}
           </Typography>
           {movie.genres?.length ? (
@@ -62,7 +66,7 @@ export default function MovieCardSelected({movie, onCardDelete}) {
            {movie.genres[0].name} 
            </Typography>) : null}
          
-           <Typography component="subtitle2" variant="h5">
+           <Typography  variant="h5">
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         {renderStars()}
       </Box>
@@ -76,14 +80,16 @@ export default function MovieCardSelected({movie, onCardDelete}) {
 }
 MovieCardSelected.propTypes = {
   movie: PropTypes.shape({
-    posterPath: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     releaseDate: PropTypes.string,
+    voteAverage: PropTypes.number,
+    image: PropTypes.string,
+
     genres:PropTypes.arrayOf(PropTypes.shape({
       id:PropTypes.number,
       name:PropTypes.string
     })),
-    voteCount:PropTypes.string,
+    voteCount:PropTypes.number,
   }).isRequired,
   onCardDelete: PropTypes.func, 
 };

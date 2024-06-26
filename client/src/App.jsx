@@ -20,13 +20,9 @@ import { AppContext } from './providers/appContext';
 
 
 function App() {
- /*  const client = new ApolloClient({
-    uri: 'http://localhost:4000/',
-    cache: new InMemoryCache(),
-    connectToDevTools: true
-  }); */
+
   const { state } = useContext(AppContext);
- const httpLink = new HttpLink({ uri: `${window.location.origin}/graphql` });
+  const httpLink = new HttpLink({ uri: `${window.location.origin}/graphql` });
  
 /*  const httpLink = new HttpLink({ uri: `http://localhost:4000/graphql` });
  */
