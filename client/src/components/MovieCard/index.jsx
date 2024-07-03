@@ -25,7 +25,7 @@ export default function MovieCard({movie, onCardSelect}) {
       <CardMedia
         component="img"
         height="250"
-        image={movie.image}
+        image={movie.posterPath}
         alt={movie.title}
       />
       
@@ -58,6 +58,8 @@ export default function MovieCard({movie, onCardSelect}) {
 MovieCard.propTypes = {
   movie: PropTypes.shape({
     image: PropTypes.string.isRequired,
+    posterPath: PropTypes.string.isRequired,
+
     title: PropTypes.string.isRequired,
     releaseDate: PropTypes.string,
     voteAverage:PropTypes.number,

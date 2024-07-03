@@ -16,7 +16,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { FormattedMessage } from "react-intl";
 
 import { CONFRIM_TIMEOUT } from '../../const';
-import { SocialShare } from '../../components';
+import  SocialShare  from '../SocialShare/index';
 
 
 const style = {

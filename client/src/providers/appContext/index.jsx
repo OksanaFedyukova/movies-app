@@ -1,5 +1,5 @@
 import  { useReducer, createContext } from 'react';
-import { useDefaultContext } from "./defaultContext.js.js";
+import { useDefaultContext } from "./defaultContext.jsx";
 import { STORAGE_KEY } from '../../const.js';
 import { saveToStorage } from '../../utils/localStorage.js';
 
