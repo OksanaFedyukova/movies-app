@@ -50,7 +50,7 @@ async function startApolloServer(typeDefs, resolvers) {
   })
 
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../../client', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, '../../client', 'dist', 'index.html'))
   });
 
   await new Promise(resolve => httpServer.listen({ port: 4000 }, resolve));
