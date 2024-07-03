@@ -42,7 +42,7 @@ async function startApolloServer(typeDefs, resolvers) {
   await server.start();
   server.applyMiddleware({ app });
 
-  app.use(express.static(path.join(__dirname, '../../client', 'build')));
+  app.use(express.static(path.join(__dirname, '../../client', 'dist')));
   app.use(express.static("public"));
 
   app.get('/rest', function (req, res) {
